@@ -1,0 +1,14 @@
+insert(){
+  inp.push(ele);
+  mxtn.push(Math.max(mxt.peek(),ele));
+}
+remove(){
+  inp.pop();
+  mxtn.pop();
+}
+maxtillnow(){
+  mxtn.peek();
+}
+topEle(){
+  inp.peek();
+}
