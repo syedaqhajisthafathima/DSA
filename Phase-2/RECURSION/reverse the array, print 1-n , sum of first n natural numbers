@@ -1,0 +1,32 @@
+int [] reverse(int a[],int n){
+  helper(a,0,n-1);
+  return a;
+}
+void helper(int a[],int i,int j){
+  if(i>=j) return;
+  int t=a[i];
+  a[i]=a[j];
+  a[j]=t;
+  helper(a,i+1,j-1);
+}
+
+// print 1 to n
+void solve(int n){
+  if(n==0)return;
+  solve(n-1);
+  System.out.println(n+" ");
+}
+
+//print n to 1
+void solve(int n){
+  if(n==0) return;
+  System.out.println(n+" ");
+  solve(n-1);
+}
+
+//sum of first n natural numbers
+int sum(int n){
+  if(n==0) return 0;
+  if(n==1) return 1;
+  return n+sum(n-1);
+}
