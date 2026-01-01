@@ -5,6 +5,6 @@ while(!q.isEmpty()){
   int x=q.remove();
   q.add(x*10);
   q.add(x*10 + 1);
-  ans.add(x);
   if(ans.size()>=n) break;
+  ans.add(x);
 }
