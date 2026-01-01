@@ -1,0 +1,15 @@
+int sum(int []a){
+  return helper(a[],0);
+          or
+  return helper(a[],a.length);
+}
+int helper(int a[],int i){
+  if(i==a.length) return 0;
+  return helper(a,i+1)+a[i];
+}
+
+//size
+int helper(int a[],int n){
+  if(n==0) return 0;
+  return helper(a,n-1)+a[n-1];
+}
