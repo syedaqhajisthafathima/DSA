@@ -1,0 +1,10 @@
+Queue<Integer> q=new LinkedList<>();
+q.add(1);
+List<Integer> ans=new ArrayList<>();
+while(!q.isEmpty()){
+  int x=q.remove();
+  q.add(x*10);
+  q.add(x*10 + 1);
+  ans.add(x);
+  if(ans.size()>=n) break;
+}
