@@ -1,0 +1,29 @@
+// reverse_linkedList 
+prev=null;
+curr=head;
+Next=null;
+while(curr!=null){
+  Next=curr.next;
+  curr.next=prev;
+  prev=curr;
+  curr=next;
+}
+return prev;
+
+// is_List_Palindrome
+#reverse 1st half of list and check palindrome or not
+boolean isPalin(LLNode h){
+  if(h==null) return true;
+  LLNode m=midNode(n); //find midNode
+  LLNode h1=m.next;
+  m.next=null;
+  h1=reverse(h1) // reverse the list
+  while(h1!=null){
+    if(h.data!=h1.data){
+      return false;
+    }
+    h=h.next;
+    h1=h1.next;
+  }
+  return true;
+}
