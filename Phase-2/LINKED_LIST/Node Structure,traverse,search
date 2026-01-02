@@ -1,0 +1,47 @@
+//Linked List || Singly linked list
+Class LLNode{
+  int data;
+  LLNode next;
+  public LLNode(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+
+
+//Doubly linked list
+Class DLLNode{
+  String name;
+  float cgpa;
+  long money;
+  DLLNode prev;
+  DLLNode next;
+  public DLLNode(String name,float cgpa,long money){
+    this.name=name;
+    cgpa=c;
+    this.money=m;
+  }
+}
+
+// traverse
+void traverse(SSL Node,h){
+  if(h==null)return;
+  SLLNode temp=h;
+  while(temp!=node){
+    sopln(temp.data);
+    temp=temp.next;
+  }
+}
+
+//search
+search(h,x){
+  if(h==null) return null;
+  SLLNode temp=h;
+  while(temp!=null){
+    if(x==temp.data){
+      return temp;
+    }
+    temp=temp.next;
+  }
+  return null;
+}
