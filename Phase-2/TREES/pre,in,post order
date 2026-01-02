@@ -1,0 +1,36 @@
+//using recursion
+void preorder(node){
+  if(node==null) return;
+  System.out.print(node); or ans.add(node);
+  preorder(left);
+  preorder(right);
+}
+void inorder(node){
+  if(node==null) return;
+  inorder(left);
+  System.out.print(node); or ans.add(node);
+  inorder(right);
+}
+void postorder(node){
+  if(node==null) return;
+  postorder(left);
+  postorder(right);
+  System.out.print(node); or ans.add(node);
+}
+
+// using List
+List<Integer> preorder(node){
+  ans=new ArrayList<>();
+  preorder(node);
+  return ans;
+}
+List<Integer> inorder(node){
+  ans=new ArrayList<>();
+  inorder(node);
+  return ans;
+}
+List<Integer> postorder(node){
+  ans=new ArrayList<>();
+  postorder(node);
+  return ans;
+}
