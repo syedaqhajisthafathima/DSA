@@ -1,0 +1,21 @@
+SLLNode insertion_at_End(h,x){
+  SLLNode nn=new SLLNode(x);
+  if(h==null) return nn;
+  SLLNode temp=h;
+  while(temp.next!=null){
+    temp=temp.next;
+  }
+  temp.next=nn;
+  return nn;
+}
+
+SLLNode insertion_at_Begin(int x){
+  SLLNode nn=new SLLNode(x);
+  if(head==null){
+    head=tail=nn;
+  }
+  else{
+    nn.next=head;
+    head=nn;
+  }
+}
