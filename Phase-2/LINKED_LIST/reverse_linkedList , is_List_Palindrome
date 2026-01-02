@@ -11,7 +11,8 @@ while(curr!=null){
 return prev;
 
 // is_List_Palindrome
-#reverse 1st half of list and check palindrome or not
+
+#(reverse 1st half of list and check palindrome or not)
 boolean isPalin(LLNode h){
   if(h==null) return true;
   LLNode m=midNode(n); //find midNode
