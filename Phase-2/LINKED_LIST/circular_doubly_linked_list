@@ -1,0 +1,30 @@
+ CDLLNode insert_at_begin(CDLLNode n,int x){
+   CDLLNode nn=new CDLLNode(x);
+   nn.next=nn;
+   nn.prev=nn;
+   if(h==null) return nn;
+   else{
+     CDLLNode last=h.prev;
+     nn.next=h;
+     h.prev=nn;
+     last.next=nn;
+     nn.next=last;
+     return nn;
+   }
+ }
+
+ CDLLNode insert_at_End(CDLLNode n,int x){
+   CDLLNode nn=new CDLLNode(x);
+   nn.next=nn;
+   nn.prev=nn;
+   if(h==null) return nn;
+   else{
+     CDLLNode last=h.prev;
+     last.next=nn;
+     nn.prev=last;
+     nn.next=head;
+     head.prev=nn;
+     last=nn;
+     return nn;
+   }
+ }
