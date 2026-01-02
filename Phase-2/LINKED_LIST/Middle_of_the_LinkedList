@@ -1,0 +1,14 @@
+while(f!=null && f.next!=null && f.next.next!=null){
+  f=f.next.next;
+  s=s.next;
+}
+
+if(f.next==null){ //odd length
+  return s;
+}
+if(f.next!=null){ //even length
+  //1st mid
+  return s;
+  //2nd mid
+  return s.next;
+}
