@@ -1,0 +1,13 @@
+Class TreeNode{
+  int val;
+  TreeNode left,right;
+  TreeNode(int data){
+    val=data;
+    left=right=null;
+  }
+  main(){
+    TreeNode root=new TreeNode(1);
+    root.left=new TreeNode(2);
+    root.right=new TreeNode(3);
+  }
+}
