@@ -1,0 +1,8 @@
+DLLNode insertion_at_End(h,x){
+  DLLNode nn=new DLLNode(x);
+  if(h==null) head=tail=nn;
+  else{
+    tail.next=nn;
+    tail=nn or tail.next;
+  }
+}
