@@ -1,0 +1,88 @@
+# Cycle exist:
+s=head;
+f=head;
+while(f!=null && f.next!=null){
+  s=s.next;
+  f=f.next.next;
+  if(s==f){
+    return true; //Cycle exist
+  }
+}
+return false;
+
+#Start of Cycle:
+s=head;
+f=head;
+while(f!=null && f.next!=null){
+  s=s.next;
+  f=f.next.next;
+  if(s==f){
+    f=head;
+    while(f!=s){
+      f=f.next;
+      s=s.next;
+    }
+    return s;
+  }
+  return null;
+}
+
+#Length of the Cycle:
+int c=0;
+s=head;
+f=head;
+while(f!=null && f.next!=null){
+  s=s.next;
+  f=f.next.next;
+  if(s==f){
+    c=1;
+    while(s!=f.next){
+      c++;
+      f=f.next;
+    }
+    return c;
+  }
+}
+return 0;
+
+#input format of the Intersection of the two lists:
+s=head;
+f=head;
+while(f!=null && f.next!=null){
+  int c=1;
+  while(s.next!=f){
+    c++;
+    s=s.next;
+  }
+  return c;
+}
+return 0;
+
+#Remove Cycle:
+while(f.next!=0){
+  f=f.next;
+}
+f.next=null;
+return head;
+
+
+### ALL CODES IN ONE ###
+s=head;
+f=head;
+while(f!=null && f.next!=null){
+  s=s.next;
+  f=f.next.next;
+  if(s==f){
+    f=head;
+    while(f!=s){
+      s=s.next;
+      f=f.next;
+    }
+    int c=1;
+    while(s.next!=f){
+      s=s.next;
+      c++;
+    }
+    s.next=null;
+  }
+}
