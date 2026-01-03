@@ -1,0 +1,44 @@
+//calculate 2 power n(2^n):
+1<<n
+
+//calculate x and y as the set bit:
+((1<<x)||(1<<y))
+
+//calculate x no.of  1's followers by y no.of 0's:
+((1L<<x)-1)<<y
+
+//count total set bits:
+int countSetBit(long n){
+  int c=0;
+  for(int bp=0;bp<64;bp++){
+    if(check_Kth_bit(n,bp)){
+      c++;
+    }
+  }
+  return c;
+}
+check_Kth_bit(n,k){
+  n&(1L<<k)!=0; or ((n>>k)&1)!=0;
+}
+
+          (or)
+
+while(n>0){
+  if((n&1)!=0)c++;
+  n=n>>1;
+}
+
+//Set Kth bit:
+(n|(1L<<k))
+
+//clear Kth bit:
+n&(~(1L<<<k))
+
+//flip Kth bit:
+n^(1L<<k)
+
+//given n Check whether it is power of 2 or not:
+if((n>0 && (n&(n-1)))==0) return true;
+else return false;
+
+
