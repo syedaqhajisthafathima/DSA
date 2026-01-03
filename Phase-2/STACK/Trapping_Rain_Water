@@ -1,0 +1,4 @@
+given arr
+maxL from right to left
+maxR from left to right
+ans+=min(maxL[i],maxR[i])-arr[i];
