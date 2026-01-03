@@ -1,0 +1,27 @@
+//if n%2==0 => n=n/2
+//if n%3==0 => n=n/3
+//n=n-1
+
+class Pair{
+  int val,lvl;
+  public Pair(int v,int l){
+    val=v;
+    lvl=l;
+  }  
+}
+class BZ{
+    public int solve(int n){
+        Queue<Pair> q=new LinkedList<>();
+        q.add(new Pair(n,0));
+        while(true){
+          Pair p=q.remove();
+          int val=p.val;
+          int lvl=p.lvl;
+          if(val==1) return lvl;
+          if(val%2==0) q.add(new Pair(val/2,lvl+1));
+          if(val%3==0) q.add(new Pair(val/3,lvl+1));
+          q.add(new Pair(val-1,lvl+1));
+        }
+      return -1;
+    }
+}
