@@ -1,0 +1,9 @@
+int d=0;
+int height(node){
+  if(node==null) return 0;
+  lh=height(node.left);
+  rh=height(node.right);
+  d=Math.max(d,lh+rh+1);
+  return max(lh,rh)+1;
+}
+return d;
