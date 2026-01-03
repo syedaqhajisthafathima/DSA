@@ -1,0 +1,14 @@
+Algorithm:
+if (h1 & h2 is null) return null
+find length of list1(h1) and length of h2
+diff=ans(len(h1) - len(h2)) //l1=len(h1) , l2=len(h2)
+if(l1 > l2)
+  move h1 diff times
+else
+  move h2 diff times
+while(h1!=null && h2!=null){
+  if(h1==h2) return h1 or h2;
+  h1=h1.next;
+  h2=h2.next;
+}
+return null;
