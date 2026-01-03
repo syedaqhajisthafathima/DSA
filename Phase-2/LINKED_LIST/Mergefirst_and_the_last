@@ -1,0 +1,5 @@
+mid=middle(h1);
+h2=mid.next;
+mid.next=null;
+h2=reverse(h2);
+//merge(h1,h2) one by one
