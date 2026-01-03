@@ -36,3 +36,8 @@ List<Integer> RighttView(TreeNode root){
   }
   return ans;
 }
+
+
+//covered means not in LV & RV
+//uncovered means  in LV & RV
+corner test case is for 1element or 2 elements
