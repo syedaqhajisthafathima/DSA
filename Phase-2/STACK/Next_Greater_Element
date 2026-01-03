@@ -1,0 +1,13 @@
+public NGE(arr){
+  int [] ng=new int[n];
+  Stack st=new Stack<>();
+  Arrays.fill(ng,n);
+  for(int i=0;i<n;i++){
+    while(!st.isEmpty() && arr[i]>arr[st.peek()]){
+      ng[st.peek()]=arr[i];
+      st.pop();
+    }
+    st.push(i);
+  }
+  return ng;
+}
