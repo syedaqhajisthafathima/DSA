@@ -1,0 +1,11 @@
+SLLNode clone(SLLNode head){
+  SLLNode dummy=new SLLNode(-99);
+  SLLNode tail=dummy;
+  while(head.next!=null){
+    SLLNode nn=new SLLNode(head.data);
+    tail.next=nn;
+    tail=tail.next;
+    head=head.next;
+  }
+  return dummy.next;
+}
