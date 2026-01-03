@@ -1,0 +1,18 @@
+int HistogramArea(int []a,int n){
+  int ns[]=nsei(a,n);//store next smaller element index
+  int ps[]=psei(a,n);//store prev smaller element index
+  int maxArea=0;
+  for(int i=0;i<n;i++){
+    area=(ns[i]-ps[i]-1)*a[i];
+    maxArea=Math.max(maxArea,area);
+  }
+  return maxArea;
+}
+
+int []nsei(int []a,int n){
+  //from NSE store indexes instead of element
+}
+
+int []psei(int []a,int n){
+  //from PSE store indexes instead of element
+}
