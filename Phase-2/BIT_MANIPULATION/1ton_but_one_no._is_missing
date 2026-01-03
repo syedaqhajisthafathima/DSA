@@ -1,0 +1,7 @@
+for(int ele:arr){
+  x=x^ele;
+}
+for(int i:[1,n]){
+  x=x^i;
+}
+return x;
