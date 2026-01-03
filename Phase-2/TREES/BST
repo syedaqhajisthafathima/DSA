@@ -1,0 +1,123 @@
+//Class Structure
+class BTNode{
+  BTNode left;
+  BTNode right;
+  int val/data/value;
+  public BTNode(int d){
+    val=d;
+    left=right=null;
+  }
+}
+
+//Navy
+class Navy{
+  List<Navy>children;
+  int val;
+  public Navy(int d){
+    val=d;
+    for(Navy child:children){
+      child=null;
+    }
+  }
+}
+
+
+int countNodes(BTNode root){
+  int left=0,right=0;
+  if(root==null) return 0;
+  if(left.root!=null) return countNode(left,root);
+  if(right.root!=null) return countNodes(right,root);
+  return left+right+1;
+}
+                or
+int countNodes(BTNode root){
+  if(root==null) return 0;
+  return 1+countNodes(root.left);
+  return 1+countNodes(root.right);
+}
+
+//Sum
+int sumNodes(root){
+  if(root==null) return 0;
+  return root.val+sumNodes(root.left);
+  return root.val+sumNodes(root.right);
+}
+                or
+return root.val+sumNodes(root.left)+sumNodes(root.right);
+
+//CountLeaf
+int countLeafNode(root){
+  if(root==null)return 0;
+  if(root.left==null && root.right==null) return 1;
+  return CLN(left)+CLN(right);
+}
+
+//Replace root data with sum of its sub_tree
+if(root==null) return 0;
+int l=sumNode(node.left);
+int r=sumNode(root.right);
+root.val=l+r+root.val;
+return root.val;
+
+//height
+int height(BTNode root){
+  int(root==null) return 0;
+  int l=height(root.left);
+  int r=height(root.right);
+  return 1+Math.max(l,r);
+}
+
+//Insert in a BSTNode 
+BSTNode create BST(int []a){
+  BSTNode r=null;
+  for(int ele:a){
+    r=insert(r,ele);
+  }
+  return r;
+}
+
+BSTNode insert(r,ele){
+  if(r==null) return new BSTNode(ele);
+  if(ele<r.val) r.left=insert(r.left,ele);
+  else r.right=insert(r.right,ele);
+  return r;
+}
+
+//Search
+BSTNode Search(BSTNode r,int x){
+  if(r==null) return null;
+  if(x==r.val) return r;
+  if(r<r.val) return Search(r.left,x);
+  return Search(r.right,x);
+}
+
+//min
+BSTNode min(r){
+  if(r==null) return null;
+  if(r.left!=null) return r;
+  return min(r.left);
+}
+
+//max
+BSTNode max(r){
+  if(r==null) return null;
+  if(r.right==null) return r;
+  return max(r.right);
+}
+
+//Deletion
+BSTNode delete(BSTNode r,int x){
+  if(r==null) return null;
+  if(x < r.val) r.left=delete(r.left,x);
+  else if(x>r.val) r.right=delete(r.right,x);
+  else{
+    if(r.left==null) return r.right;
+    else if(r.right==null) return r.left;
+    else{
+      BSTNode min=findmin(r.right);
+      r.val=min.val;
+      r.right=delete(r.right,min.val);
+    }
+  }
+return r;
+}
