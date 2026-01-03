@@ -1,0 +1,13 @@
+public PGE(arr){
+  int [] pg=new int[n];
+  Stack st=new Stack<>();
+  Arrays.fill(pg,n);
+  for(int i=n-1;i>=0;i--){
+    while(!st.isEmpty() && arr[i]>arr[st.peek()]){
+      pg[st.peek()]=arr[i];
+      st.pop();
+    }
+    st.push(i);
+  }
+  return pg;
+}
