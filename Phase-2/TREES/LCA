@@ -1,0 +1,3 @@
+if(left==null) return right;
+if(right==null)return left;
+if(left && right !=null) return parent or root
