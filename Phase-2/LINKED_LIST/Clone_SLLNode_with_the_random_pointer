@@ -1,0 +1,25 @@
+temp=head;
+while(temp!=null){
+  SLLNode nn=new SLLNode(temp.val);
+  nn.next=temp.next;
+  temp.next=nn;
+  temp=temp.next.next;
+}
+temp=head;
+while(temp!=null){
+  if(temp.random!=null){
+    temp.next.random=temp.random.next;
+  }
+  else temp.next.random=null;
+  temp=temp.next.next;
+}
+
+tail=dummy;
+temp=head;
+while(temp!=null){
+  tail.next=temp.next;
+  temp.next=temp.next.next;
+  temp=temp.next;
+  tail=tail.next;
+}
+return dummy.next;
