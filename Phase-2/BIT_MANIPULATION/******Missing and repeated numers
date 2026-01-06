@@ -1,0 +1,25 @@
+//for given numbers 1 -> n ,one number will be missing and another number will be repeated.
+
+for(i : (1 -> n)){
+  x^=i;
+  x^=arr[i-1];
+}
+for(i=0 to 63){
+  if(check(x,i)){
+    pos=i;
+    break;
+  }
+}
+int grp1=0,grp2=0;
+for(int i=0;i<n;i++){
+  if(check(arr[i],pos)){
+    grp1 ^= arr[i];
+  }
+  else grp2 ^= arr[i];
+
+  if(check(i,pos)) grp1 ^= i;
+  else grp2 ^= i;
+
+  if(!check(arr[i],pos)) grp2 ^= arr[i];
+  if(!check(i,pos)) grp2 ^= i;
+}
