@@ -1,0 +1,13 @@
+public int addM(int a,int b,int m){
+  return (int) (((long)a%m) + (b%m))%m;
+}
+
+public int multiM(int a,int b,int m){
+  return (int) (((long)a%m) * (b%m))%m;
+}
+
+//a*b*c with mod:
+multiM(a,multiM(b,c,m),m);
+
+//(a+b*c)%m :
+addM(a,multiM(b,c,m),m);
