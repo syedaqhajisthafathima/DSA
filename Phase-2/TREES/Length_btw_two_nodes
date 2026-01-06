@@ -1,0 +1,33 @@
+public int(or nodes or edges) length(r,a,b){
+  List Lar=new ArrayList<>();
+  List Lbr=new ArrayList<>();
+  Lar=fph(r,al);
+  Lbr=fpg(r,bl);
+  int i=Lar.size()-1;
+  int j=Lbr.size()-1;
+  while(i>=0 && j>=0 && Lar.get(i)==Lbr.get(j)){
+    i--;
+    j--;
+  }
+  LCA=Lar.get(i+1) or Lbr.get(j+1);
+  int Nodes=i+j+3;
+  int edges=i+j+2;
+  return Nodes;
+}
+void fph(root,al){
+  if(r==null) return;
+  if(r.data==a){
+    l.add(r);
+    return;
+  }
+  fph(r.left,al);
+  if(l.size()>0){
+    l.add(r);
+    return;
+  }
+  fph(r.right,al);
+  if(l.size()>0){
+    l.add(r);
+    return;
+  }
+}
