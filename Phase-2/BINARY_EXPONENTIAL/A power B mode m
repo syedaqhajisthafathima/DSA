@@ -1,0 +1,8 @@
+public long binExp(long A, long B,long m){
+  if(B==0) return 1;
+  if(B==1) return A;
+  long half=binExp(A,B/2,m);
+  long sq=multiM(half,half,m);
+  if((B&1)==0) return sq;
+  else return multiM(sq,A,m);
+}
