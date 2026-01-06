@@ -1,0 +1,9 @@
+// (nCr)%m
+(nCr)%m = ((n!) / ((n-r)! * r!)) %m
+
+(a/(b*c)) % m = (a * ((1/b)%m) * ((1/c)%m))%m
+    p = (1/b)%m) or binExp(b,m-2,m)
+    q = (1/c)%m) or binExp(c,m-2,m)
+
+(a/(b*c)) % m = (a*p*q) % m 
+              =  multiM(a, multiM(p,q,m) , m);
