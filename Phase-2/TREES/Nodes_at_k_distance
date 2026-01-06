@@ -1,0 +1,13 @@
+ans+=nodesAtKLevel(l.get(0),k);
+for(i=1;i<l.size();i++){
+  if(k-i==0){
+    ans++;
+    break;
+  }
+  if(l.get(i).right == l.get(i-1)){
+    ans+=nodesAtKlevel(l.get(i).left,k-i-1);
+  }
+  else{
+    ans+=nodesAtKlevel(l.get(i).right,k-i-1);
+  }
+}
