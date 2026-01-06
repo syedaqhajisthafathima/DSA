@@ -1,0 +1,14 @@
+//every number is in triplet except one number find out that number
+
+for(bp:[0,63]){
+  int c=0;
+  for(int ele:arr){
+    if(check(ele,bp)){
+      c++;
+    }
+  }
+  if(c%3!=0){
+    ans|=(1<<bp);  // ans+=Math.pow(2,bp);
+  }
+}
+return ans;
