@@ -1,0 +1,17 @@
+// 2 pow n total subsets of an array of length n
+
+List<List<Integer>> subsets(int []arr,int n){
+  List<List<Integer>> outer=new ArrayList<>();
+  int m=(1<<n);
+  for(int num=0;num<m;num++){
+    List<Integer>inner=new ArrayList<>();
+    for(int bp=0;bp<n;bp++){
+      if(check(num,bp){
+        inner.add(arr[bp]);
+      }
+    }
+    //Inner is one subset
+    outer.add(inner);
+  }
+  return outer;
+}
