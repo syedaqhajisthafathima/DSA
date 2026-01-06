@@ -1,0 +1,22 @@
+curr = root
+while(curr!=null){
+  if(curr.left != null){
+    Node ip= arr.left;
+    while(ip.right!=null && ip.right!= curr){
+      ip=ip.right;
+    }
+    if(ip.right==null){
+      ip.right=curr;
+      curr=curr.left;
+    }
+    else{
+      ip.right=null;
+      print(curr);
+      curr=curr.right;
+    }
+  }
+  else{
+    print(curr)
+    curr=curr.right;
+  }
+}
