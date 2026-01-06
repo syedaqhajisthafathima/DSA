@@ -1,0 +1,10 @@
+public long[][] product(long [][]a, long[][]b){
+  long[][] res=new long[r1][c1];
+  for(i : 0 -> r1){
+    for(j : 0 -> c2){
+      for(k : 0 -> c1 or r2){
+          res[i][j]=addM(res[i][j],multiM(a[i][k],b[k][j],m),m);
+      }
+    }
+  }
+}
