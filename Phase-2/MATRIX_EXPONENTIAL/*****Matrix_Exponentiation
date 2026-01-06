@@ -1,0 +1,10 @@
+// ([a] pow b) % m
+
+public long[][] matExp(long [][]a ,long b,long m){
+  if(b==0) return identity(a.length);
+  if(b==1) return a;
+  long [][] half=matExp(a,b/2,m);
+  long [][]sq=product(half,half);
+  if((b&1)==0) return sq;
+  else return product(sq,a,m);
+}
