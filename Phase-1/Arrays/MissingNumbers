@@ -1,0 +1,9 @@
+public static int missingNumber(int[] arr, int n) {
+    int sum = n * (n + 1) / 2;
+    int arrSum = 0;
+
+    for (int x : arr) {
+        arrSum += x;
+    }
+    return sum - arrSum;
+}
