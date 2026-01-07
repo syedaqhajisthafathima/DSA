@@ -1,0 +1,7 @@
+public static boolean searchElement(int[] arr, int key) {
+    Set<Integer> set = new HashSet<>();
+    for (int num : arr) {
+        set.add(num);
+    }
+    return set.contains(key);
+}
