@@ -1,0 +1,9 @@
+public static int countInRange(int[] arr, int L, int R) {
+    int left = ceilIndex(arr, L);   // first index >= L
+    int right = floorIndex(arr, R); // last index <= R
+
+    if (left == -1 || right == -1 || left > right)
+        return 0;
+
+    return right - left + 1;
+}
