@@ -1,0 +1,11 @@
+public static Set<Integer> findDuplicates(int[] arr) {
+    Map<Integer, Integer> map = new HashMap<>();
+    Set<Integer> duplicates = new HashSet<>();
+    for (int num : arr) {
+        map.put(num, map.getOrDefault(num, 0) + 1);
+        if (map.get(num) > 1) {
+            duplicates.add(num);
+        }
+    }
+    return duplicates;
+}
